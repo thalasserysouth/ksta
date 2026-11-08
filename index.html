@@ -412,7 +412,7 @@ function importMembersCSV(){
    const aliases={
     branch:["branch","Branch"],unit:["unit","Unit"],name:["name","Member Name"],
     post:["post","designation","Designation"],type:["type","membershiptype","Membership Type","Type"],
-    phone:["phone","mobile","mobileno","Phone"]
+    phone:["phone","mobile","mobileno","mobilenumber","phonenumber","contactnumber","contactno","contact","whatsappnumber"]
    };
    const ix={};for(const [k,opts] of Object.entries(aliases))ix[k]=headers.findIndex(h=>opts.map(normalizeHeader).includes(h));
    if(ix.name<0||ix.unit<0)throw Error("The CSV must contain at least Name and Unit columns. Use the template file.");
